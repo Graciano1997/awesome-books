@@ -35,7 +35,6 @@ function fillBooksList() {
         dbBook.forEach((book) => {
             document.querySelector(".list").append(buildBookField(book));
         });
-
     }
 }
 
@@ -66,7 +65,6 @@ function removeAwasomeBook(book) {
             localStorage.setItem('booksDb', JSON.stringify(bookArray));
         }
     }
-
 }
 
 
