@@ -1,6 +1,17 @@
 const authorInput = document.querySelector('#authorBook');
 const titleInput = document.querySelector('#titleBook');
 const btnAdd = document.querySelector('.btnAdd');
+
+class BookLibrary {
+    #localDB = JSON.parse(localStorage.getItem('booksDb'));
+    constructor(author, title){
+        this.author=author;
+        this.title=title;
+    }
+
+    bookArray:localDB!==null?localDB:[]
+}
+
 let bookArray;
 if (JSON.parse(localStorage.getItem('booksDb')) !== null) {
     bookArray = JSON.parse(localStorage.getItem('booksDb'));
@@ -48,7 +59,7 @@ function addBook() {
         document.querySelector('.list').append(buildBookField(book));
         authorInput.value = '';
         titleInput.value = '';
-        location.reload();
+         location.reload();
     }
 }
 
