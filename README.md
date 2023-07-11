@@ -1,12 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <h3><b>First Project week 1 - Module 2</b></h3>
+  <h3><b>First Project week 1 - Awesome Books </b></h3>
 
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -58,6 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://graciano1997.github.io/awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,13 +83,13 @@ To setup and install this project, follow the below steps:
 - Clone this project by the command:
 
 ```
-$ git clone https://github.com/SaveryIV/Portfolio-Responsive.git
+$ git clone https://github.com/Graciano1997/awesome-books.git
 ```
 
 - Then switch to the project folder by the bellow query:
 
 ```
-$ cd Portfolio-Responsive
+$ cd dir
 ```
 
 ### Install
@@ -115,13 +113,10 @@ To run the project:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Edgah**
-👤 **Graciano**
 👤 **Agustin Soria Meza**
+👤 **Graciano**
+👤 **Edgah**
 
-- GitHub: []()
-- LinkedIn: []()
-- Site: ()
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -135,12 +130,13 @@ To run the project:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Graciano1997/awesome-books/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
+If you like this project give it a⭐️
 
 If you like this project share it with others you think can help to learn something new
 
