@@ -85,6 +85,7 @@ document.querySelectorAll('.remover').forEach((btnRem) => {
         const authorName = btnRem.previousElementSibling.previousElementSibling.innerHTML;
         const bookTitle = btnRem.previousElementSibling.innerHTML;
         const currentBook = new BookObject(authorName, bookTitle)
+
         removeAwasomeBook(currentBook);
         btnRem.parentNode.remove();
     });
