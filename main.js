@@ -8,9 +8,11 @@ if (JSON.parse(localStorage.getItem('booksDb')) !== null) {
     bookArray = [];
 }
 
-function BookObject(author, title) {
-    this.author = author;
-    this.title = title;
+class BookObject {
+    constructor(author, title) {
+        this.author = author;
+        this.title = title;
+    }
 }
 
 function buildBookField(book) {
