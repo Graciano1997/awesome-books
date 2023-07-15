@@ -12,15 +12,27 @@ class BooksLibrary {
     
     #libraryLayout(book) {
         const div = document.createElement('div');
+        div.classList.add('card-book');
+        
+        const divDescr = document.createElement('div');
+        divDescr.classList.add('bookDescription');   
+        
         const authorName = document.createElement('h2');
         authorName.textContent = book.author;
+        authorName.classList.add('autor');
         const bookTitle = document.createElement('h3');
+        bookTitle.classList.add('title')
         bookTitle.textContent = book.title;
+        const span = document.createElement('span');
+        span.classList.add('spanSpace')
+        span.textContent='By';
+        divDescr.append(bookTitle,span,authorName)
         const button = document.createElement('button');
+        button.classList.add('remove-button');
         button.textContent = "remove";
         button.classList.add('remover');
         const hr = document.createElement('hr');
-        div.append(authorName, bookTitle, button, hr);
+        div.append(divDescr, button, hr);
         return div;
     }
 
@@ -28,16 +40,22 @@ class BooksLibrary {
         if (JSON.parse(localStorage.getItem('booksDb')) !== null) {
             const dbBook = JSON.parse(localStorage.getItem('booksDb'));
             dbBook.forEach((book) => {
-                document.querySelector(".list").append(this.#libraryLayout(book));
+                document.querySelector(".list-display").append(this.#libraryLayout(book));
             });
         }
+        
+document.querySelectorAll('.card-book').forEach((card,index) => {
+    if(index%2==1){
+        card.classList.add('alt');
+    }
+});
     }
 
     setBook(book) {
         if (book.author !== '' && book.title !== '') {
             this.bookArray.push(book);
             localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
-            location.reload();
+            // location.reload();
         }
     }
 
@@ -48,8 +66,10 @@ class BooksLibrary {
             if (this.bookArray[i].title === book.title && this.bookArray[i].author === book.author) {
                 this.bookArray.splice(i, 1);
                 localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
+                break;
             }
         }
+        this.displayBook();
     }
 
     showDate() {
@@ -69,6 +89,8 @@ class BooksLibrary {
 }
 
 
+
+
 class Book {
     constructor(author, title) {
         this.author = author;
@@ -80,14 +102,15 @@ const libraryController = new BooksLibrary();
 
 
 btnAdd.addEventListener('click', () => {
-     e.preventDefault();
+    // e.preventDefault();
     const book = new Book(authorInput.value, titleInput.value);
     libraryController.setBook(book);
 });
 
-
-
 libraryController.displayBook();
+
+
+
 setInterval(() => {
     $date.textContent = libraryController.showDate();
   }, 1000);
@@ -95,16 +118,17 @@ setInterval(() => {
 
 document.querySelectorAll('.remover').forEach((btnRem) => {
     btnRem.addEventListener('click', () => {
-        const authorName = btnRem.previousElementSibling.previousElementSibling.innerHTML;
-        const bookTitle = btnRem.previousElementSibling.innerHTML;
+        const  bookTitle=document.querySelector('.title').innerHTML;
+        const  authorName =document.querySelector('.autor').innerHTML;
         const book = new Book(authorName, bookTitle);
+        console.log(book);
         libraryController.deleteBook(book);
         btnRem.parentNode.remove();
     });
 });
 
 $addLink.addEventListener('click', () => {
-    document.querySelector('.div-remove').classList.add('hide');
+    document.querySelector('.list-display').classList.add('hide');
     document.querySelector('.form').classList.remove('hide');
     document.querySelector('.section-contact-info').classList.add('hide');
     $h1.textContent = 'Add a new book';
@@ -114,7 +138,7 @@ $addLink.addEventListener('click', () => {
   });
   
   $listLink.addEventListener('click', () => {
-    document.querySelector('.div-remove').classList.remove('hide');
+    document.querySelector('.list-display').classList.remove('hide');
     document.querySelector('.form').classList.add('hide');
     document.querySelector('.section-contact-info').classList.add('hide');
     $h1.textContent = 'All awesome books';
@@ -124,7 +148,7 @@ $addLink.addEventListener('click', () => {
   });
   
   $contactLink.addEventListener('click', () => {
-    document.querySelector('.div-remove').classList.add('hide');
+    document.querySelector('.list-display').classList.add('hide');
     document.querySelector('.form').classList.add('hide');
     document.querySelector('.section-contact-info').classList.remove('hide');
     $h1.textContent = 'Contact information';
