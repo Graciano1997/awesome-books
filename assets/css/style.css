@@ -68,6 +68,11 @@ header {
   text-decoration: none;
   color: black;
   font-size: 13px;
+
+  @media (max-width: 380px) {
+    font-size: 9px;
+    font-weight: bold;
+  }
 }
 
 #contact-li {
