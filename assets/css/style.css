@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+#add {
+  border: 3px solid black;
+  background-color: white;
+  box-shadow: 3px 5px;
+  width: 3rem;
+  align-self: flex-end;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  width: 90vw;
+  height: 3rem;
+  align-items: center;
+}
+
+#date {
+  font-size: small;
+  align-self: flex-end;
+  padding-right: 3vw;
+  text-align: end;
+  margin-right: 1.5%;
+}
+
+.navbar-container div {
+  padding-left: 15px;
+}
+
+.list-nav {
+  display: flex;
+}
+
+.list-nav li {
+  border-right: 2px solid black;
+  padding-right: 15px;
+  padding-left: 15px;
+  list-style-type: none;
+  color: black;
+}
+
+.list-nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+#contact-li {
+  border-right: none;
+}
+
+#h1 {
+  text-align: center;
+}
+
+.script {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  margin-top: 10vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+#form button {
+  width: 25%;
+  align-self: end;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: 3px 5px;
+}
+
+.div-remove {
+  width: 90vw;
+  min-height: 40vh;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-book {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-book.alt {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b3b3b36b;
+}
+
+.card-book hr {
+  display: none;
+}
+
+.remove-button {
+  margin-right: 10px;
+  border: 2px solid black;
+  box-shadow: 3px 5px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.black-line {
+  width: 25vw;
+  height: 3px;
+  background-color: black;
+  margin-top: 50px;
+}
+
+#titleBook {
+  border: 2px solid black;
+  color: black;
+  width: 300px;
+  height: 30px;
+}
+
+#authorBook {
+  border: 2px solid black;
+  color: black;
+  height: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.footer-container {
+  border: 3px solid black;
+  width: 90vw;
+  height: 3rem;
+}
+
+.footer-container p {
+  padding-left: 15px;
+}
+
+.hide {
+  display: none;
+}
