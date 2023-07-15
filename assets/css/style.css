@@ -142,14 +142,14 @@ header {
   margin-top: 50px;
 }
 
-#titleBook {
+#title {
   border: 2px solid black;
   color: black;
   width: 300px;
   height: 30px;
 }
 
-#authorBook {
+#author {
   border: 2px solid black;
   color: black;
   height: 30px;
