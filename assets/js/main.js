@@ -55,7 +55,7 @@ document.querySelectorAll('.card-book').forEach((card,index) => {
         if (book.author !== '' && book.title !== '') {
             this.bookArray.push(book);
             localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
-            // location.reload();
+            location.reload();
         }
     }
 
@@ -69,7 +69,7 @@ document.querySelectorAll('.card-book').forEach((card,index) => {
                 break;
             }
         }
-        this.displayBook();
+        // this.displayBook();
     }
 
     showDate() {
@@ -102,7 +102,6 @@ const libraryController = new BooksLibrary();
 
 
 btnAdd.addEventListener('click', () => {
-    // e.preventDefault();
     const book = new Book(authorInput.value, titleInput.value);
     libraryController.setBook(book);
 });
@@ -117,9 +116,9 @@ setInterval(() => {
   
 
 document.querySelectorAll('.remover').forEach((btnRem) => {
-    btnRem.addEventListener('click', () => {
-        const  bookTitle=document.querySelector('.title').innerHTML;
-        const  authorName =document.querySelector('.autor').innerHTML;
+    btnRem.addEventListener('click', () => {        
+        const  bookTitle=btnRem.previousElementSibling.querySelector('.title').innerHTML;
+        const  authorName =btnRem.previousElementSibling.querySelector('.autor').innerHTML;
         const book = new Book(authorName, bookTitle);
         console.log(book);
         libraryController.deleteBook(book);
