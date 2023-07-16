@@ -1,30 +1,34 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>First Project week 1 - Awesome Books </b></h3>
-
+  <h3><b>Awesome books: with ES6</b></h3>
 </div>
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+- [📖 \[Portfolio\] ](#-portfolio-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Portfolio] <a name="about-project"></a>
 
-**[Awesome Books]** is the first project in the Module 2. In this project we are working much more in Javascript and practicing DOM manipulation, how add HTML code dynamically, saving and getting information in the Local Storage between other things. 
+**[Awesome Books - with ES6]** is the fourth project in the Module 2. In this project I completed again the Awesome Book but using ES6.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,8 +51,10 @@
 
 ### Key Features <a name="key-features"></a>
 
+- **[In this project you can a add new Book class that contain its properties and methods ]**
 - **[In this project you can found dymanic HTML using literal template]**
-- **[Add and remove books lists using an array with objets to save each book]**
+- **[Add,remove and see books lists using class methods to save each book]**
+- **[In this project you can see the contact information]**
 - **[Local Storage for saving the data of the books]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,7 +89,7 @@ To setup and install this project, follow the below steps:
 - Clone this project by the command:
 
 ```
-$ git clone https://github.com/Graciano1997/awesome-books.git
+$ git clone $ git clone https://github.com/Graciano1997/awesome-books.git
 ```
 
 - Then switch to the project folder by the bellow query:
@@ -113,16 +119,14 @@ To run the project:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Agustin Soria Meza**
-👤 **Graciano**
-👤 **Edgah**
+👤 **Graciano Manuel Henrique**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[New styles with CSS]**
-- [ ] **[Refactoring with new Javascript method]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,6 +148,7 @@ If you like this project share it with others you think can help to learn someth
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+<h2 align="center"><a href="#microverse">Microverse</a></h2>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
