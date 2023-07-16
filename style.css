@@ -4,6 +4,12 @@
   font-family: 'Lato', sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #add {
   border: 3px solid black;
   background-color: white;
@@ -12,18 +18,24 @@
   align-self: flex-end;
 }
 
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   border: 3px solid black;
-  width: 90vw;
+  width: 90%;
   height: 3rem;
   align-items: center;
 }
@@ -33,7 +45,7 @@ header {
   align-self: flex-end;
   padding-right: 3vw;
   text-align: end;
-  margin-right: 1.5%;
+  margin-right: 2%;
 }
 
 .navbar-container div {
@@ -55,6 +67,12 @@ header {
 .list-nav li a {
   text-decoration: none;
   color: black;
+  font-size: 13px;
+
+  @media (max-width: 380px) {
+    font-size: 9px;
+    font-weight: bold;
+  }
 }
 
 #contact-li {
@@ -73,8 +91,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
   margin-top: 10vh;
+  width: 100%;
 }
 
 .form {
@@ -92,29 +110,39 @@ header {
   box-shadow: 3px 5px;
 }
 
-.div-remove {
-  width: 90vw;
-  min-height: 40vh;
-  border: 2px solid black;
+.list-display {
   display: flex;
+  border: 2px solid black;
   flex-direction: column;
+  width: 90%;
+  overflow-y: scroll;
+  height: 50vh;
 }
 
 .card-book {
   display: flex;
   flex-direction: row;
-  height: 5vh;
+  margin-top: 0.5%;
+  margin-bottom: 0.2%;
   align-items: center;
   justify-content: space-between;
+  min-width: 100%;
 }
 
-.card-book.alt {
+.bookDescription {
+  padding-left: 2%;
   display: flex;
-  flex-direction: row;
-  height: 5vh;
+  gap: 15px;
   align-items: center;
-  justify-content: space-between;
-  background-color: #b3b3b36b;
+}
+
+.spanSpace {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.alt {
+  background-color: #e0dcdcd0;
 }
 
 .card-book hr {
@@ -149,22 +177,31 @@ header {
   height: 30px;
 }
 
+<<<<<<< HEAD:style.css
 #author {
+=======
+.title {
+  padding-left: 1%;
+}
+
+#authorBook {
+>>>>>>> feature-classBook:assets/css/style.css
   border: 2px solid black;
   color: black;
   height: 30px;
 }
 
 .footer {
+  position: fixed;
+  bottom: 1%;
+  width: 90%;
   display: flex;
   justify-content: center;
-  margin-top: 2%;
 }
 
 .footer-container {
   border: 3px solid black;
-  width: 90vw;
-  height: 3rem;
+  width: 100%;
 }
 
 .footer-container p {
