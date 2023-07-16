@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Awesome Books: a complete website with navigation</b></h3>
+  <h3><b>Awesome books: with ES6</b></h3>
 </div>
 
 # 📗 Table of Contents
@@ -28,7 +28,7 @@
 
 # 📖 [Portfolio] <a name="about-project"></a>
 
-**[Awesome Books - a complete website with navigation]** is the third project in the Module 2. In this project we completed the Awesome Books site.
+**[Awesome Books - with ES6]** is the fourth project in the Module 2. In this project I completed again the Awesome Book but using ES6.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -120,7 +120,6 @@ To run the project:
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Graciano Manuel Henrique**
-👤 **Agustin Soria Meza**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
