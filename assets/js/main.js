@@ -58,8 +58,8 @@ class BooksLibrary {
     if (book.author !== '' && book.title !== '') {
       this.bookArray.push(book);
       localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
-      window.location.reload();
     }
+    window.location.reload();
   }
 
   deleteBook(book) {
@@ -90,6 +90,8 @@ class BooksLibrary {
 
 const libraryController = new BooksLibrary();
 
+libraryController.displayBook();
+
 btnAdd.addEventListener('click', () => {
   const book = {
     author: authorInput.value,
@@ -97,9 +99,9 @@ btnAdd.addEventListener('click', () => {
   };
 
   libraryController.setBook(book);
+  authorInput.value='';
+  titleInput.value='';
 });
-
-libraryController.displayBook();
 
 setInterval(() => {
   $date.textContent = libraryController.showDate();
@@ -113,7 +115,6 @@ document.querySelectorAll('.remover').forEach((btnRem) => {
       author: authorName,
       title: bookTitle,
     };
-
     libraryController.deleteBook(bookToDel);
     btnRem.parentNode.remove();
   });
