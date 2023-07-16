@@ -7,4 +7,13 @@ const addLink = document.querySelector('#add-new');
 const h1 = document.querySelector('#h1');
 const date = document.getElementById('date');
 
-export { btnAdd, authorInput, titleInput, listLink, contactLink, addLink, h1, date }
+export {
+  btnAdd,
+  authorInput,
+  titleInput,
+  listLink,
+  contactLink,
+  addLink,
+  h1,
+  date,
+};

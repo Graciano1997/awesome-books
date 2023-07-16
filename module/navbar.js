@@ -1,6 +1,11 @@
 import * as variable from './variable.js';
-const navBarListener = () => {
+import { DateTime } from '../node_modules/luxon/src/luxon.js';
 
+const timeFunction = () => {
+  variable.date.textContent = DateTime.now().toFormat('LLL dd yyyy HH:mm:ss');
+};
+
+const navBarListener = () => {
   variable.addLink.addEventListener('click', () => {
     document.querySelector('.list-display').classList.add('hide');
     document.querySelector('.form').classList.remove('hide');
@@ -30,6 +35,6 @@ const navBarListener = () => {
     variable.addLink.style.color = 'black';
     variable.listLink.style.color = 'black';
   });
-}
+};
 
-export { navBarListener };
+export { navBarListener, timeFunction };
