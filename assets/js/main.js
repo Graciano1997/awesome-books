@@ -62,14 +62,21 @@ class BooksLibrary {
     window.location.reload();
   }
 
-  deleteBook(book) {
-    for (let i = 0; i < this.bookArray.length; i += 1) {
-      if (this.bookArray[i].title === book.title && this.bookArray[i].author === book.author) {
-        this.bookArray.splice(i, 1);
-        localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
-        break;
-      }
-    }
+  deleteBooListener() {
+    document.querySelectorAll('.remover').forEach((btnRem) => {
+      btnRem.addEventListener('click', () => {
+        const bookTitle = btnRem.previousElementSibling.querySelector('.title').innerHTML;
+        const authorName = btnRem.previousElementSibling.querySelector('.autor').innerHTML;
+        for (let i = 0; i < this.bookArray.length; i += 1) {
+          if (this.bookArray[i].title === bookTitle && this.bookArray[i].author === authorName) {
+            this.bookArray.splice(i, 1);
+            localStorage.setItem('booksDb', JSON.stringify(this.bookArray));
+            break;
+          }
+        }
+        btnRem.parentNode.remove();
+      });
+    });
   }
 
   showDate() {
@@ -92,6 +99,8 @@ const libraryController = new BooksLibrary();
 
 libraryController.displayBook();
 
+libraryController.deleteBooListener();
+
 btnAdd.addEventListener('click', () => {
   const book = {
     author: authorInput.value,
@@ -99,26 +108,13 @@ btnAdd.addEventListener('click', () => {
   };
 
   libraryController.setBook(book);
-  authorInput.value='';
-  titleInput.value='';
+  authorInput.value = '';
+  titleInput.value = '';
 });
 
 setInterval(() => {
   $date.textContent = libraryController.showDate();
 }, 1000);
-
-document.querySelectorAll('.remover').forEach((btnRem) => {
-  btnRem.addEventListener('click', () => {
-    const bookTitle = btnRem.previousElementSibling.querySelector('.title').innerHTML;
-    const authorName = btnRem.previousElementSibling.querySelector('.autor').innerHTML;
-    const bookToDel = {
-      author: authorName,
-      title: bookTitle,
-    };
-    libraryController.deleteBook(bookToDel);
-    btnRem.parentNode.remove();
-  });
-});
 
 $addLink.addEventListener('click', () => {
   document.querySelector('.list-display').classList.add('hide');
